@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Rock - Excavation & Land Moving in Mauritius</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the hero section background image */
+        .hero-bg {
+            background-image: linear-gradient(rgba(10, 38, 71, 0.75), rgba(10, 38, 71, 0.75)), url('excavator-on-site.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Simple animation for cards on hover */
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Styling for the floating WhatsApp button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            z-index: 100;
+            transition: transform 0.2s ease-in-out;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        /* Style for partner logos to make them look uniform */
+        .partner-logo img {
+            max-height: 100px; /* Increased logo size */
+            width: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .partner-logo:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+             <a href="#" class="text-2xl font-bold text-gray-800 flex items-center">
+                <!-- IMPORTANT: Replace 'your-logo.png' with your actual logo filename -->
+                <img src="./logo.png" alt="Hidden Rock Logo" class="h-10 mr-2"> <!-- Adjust h-10 for size -->
+                Hidden<span class="text-sky-500">Rock</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-sky-500">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-sky-500">About</a>
+                <a href="#services" class="text-gray-600 hover:text-sky-500">Services</a>
+                <a href="#projects" class="text-gray-600 hover:text-sky-500">Projects</a>
+                <a href="#partners" class="text-gray-600 hover:text-sky-500">Partners</a>
+                <a href="#contact" class="text-gray-600 hover:text-sky-500">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-sky-600 text-white py-2 px-4 rounded-lg hover:bg-sky-700 transition">
+                Get a Quote
+            </a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-sky-500">Home</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-sky-500">About</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-sky-500">Services</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-sky-500">Projects</a>
+            <a href="#partners" class="block py-2 text-gray-600 hover:text-sky-500">Partners</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-sky-500">Contact</a>
+            <a href="#contact" class="block mt-2 bg-sky-600 text-white py-2 px-4 rounded-lg hover:bg-sky-700 transition text-center">
+                Get a Quote
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Unearthing Potential. Building Foundations.</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Your trusted partner for excavation and earthworks in Mauritius. We clear the path for your vision.</p>
+                <a href="#services" class="bg-sky-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-sky-700 transition">Our Services</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="./Excavator-fleet.jpeg" alt="Hidden Rock Fleet" class="rounded-lg shadow-xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">About Hidden Rock</h2>
+                        <p class="text-gray-600 mb-4">
+                           Founded on the principles of hard work, safety, and precision, Hidden Rock has grown to be a trusted name in excavation and land development across Mauritius. We combine state-of-the-art machinery with decades of collective on-the-ground experience to deliver exceptional results for every client.
+                        </p>
+                        <p class="text-gray-600">
+                           Our mission is simple: to provide reliable, efficient, and safe site preparation services. With a large fleet of excavators and 40-ton trucks at our disposal, we are equipped for any task, ensuring we lay the perfect groundwork for your project's success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Transport Showcase Section -->
+        <section id="transport" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Reliable Transport</h2>
+                        <p class="text-gray-600 mb-4">
+                           Our robust fleet is the backbone of our operations. We operate a large number of modern, 40-ton trucks capable of transporting heavy materials, including large boulders, aggregates, and site debris, safely and efficiently across Mauritius.
+                        </p>
+                        <p class="text-gray-600">
+                           Whether you need materials delivered to your site or debris cleared away, our transport division is equipped for any task, ensuring your project stays on schedule.
+                        </p>
+                    </div>
+                    <!-- Image -->
+                    <div>
+                        <!-- IMPORTANT: Replace 'your-transport-photo.jpg' with your actual photo filename -->
+                        <img src="./howo-transport.jpeg" alt="Hidden Rock 40-ton transport truck" class="rounded-lg shadow-xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0ea5e9/FFFFFF?text=Our+Trucks';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">Our Comprehensive Services</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">From initial site clearing to material supply, we handle every phase of your groundwork.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-tractor text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Excavator Hire</h3>
+                        <p class="text-gray-600">Access to our modern, well-maintained fleet of excavators with skilled operators for your specific project needs.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-mound text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Excavation & Land Moving</h3>
+                        <p class="text-gray-600">Complete site excavation and large-scale earthmoving services for residential, commercial, and industrial projects.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-ruler-horizontal text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Land Leveling</h3>
+                        <p class="text-gray-600">Precision grading and land leveling to ensure a stable and perfectly prepared foundation for any construction.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-truck-fast text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Transport of Boulders</h3>
+                        <p class="text-gray-600">Safe and reliable transport of large boulders and other materials using our fleet of 40-ton trucks.</p>
+                    </div>
+                    <!-- Service Card 5 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-gem text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Supply of Boulders</h3>
+                        <p class="text-gray-600">Supply of high-quality boulders in various sizes for landscaping, retaining walls, and decorative features.</p>
+                    </div>
+                    <!-- Service Card 6 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-cubes-stacked text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Basaltic Stones for Walls</h3>
+                        <p class="text-gray-600">Supply natural, coloured basaltic stones perfect for creating beautiful and durable feature walls and facades.</p>
+                    </div>
+                    <!-- Service Card 7 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-building-circle-xmark text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Demolition</h3>
+                        <p class="text-gray-600">Controlled and safe demolition services to clear existing structures and prepare sites for new development.</p>
+                    </div>
+                     <!-- Service Card 8 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md service-card">
+                        <div class="bg-sky-100 text-sky-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fa-solid fa-seedling text-3xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Landscaping</h3>
+                        <p class="text-gray-600">Transforming your outdoor space with professional landscaping design and implementation services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Past Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="rounded-lg overflow-hidden shadow-lg group">
+                        <img src="./Agriculture-prep.jpeg" alt="Agricultural Land Preparation" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Agricultural Land Prep</h3>
+                            <p class="text-gray-600">Preparing and leveling land for the plantation of sugar cane.</p>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg group">
+                        <img src="./boulder-supply.jpeg" alt="High-Volume Boulder Supply" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">High-Volume Boulder Supply</h3>
+                            <p class="text-gray-600">Supplying our partners with 2000 tons of boulders per day using our powerful hydraulic hammers.</p>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg group">
+                        <img src="./coloured-stone.jpeg" alt="Decorative Stone Supply" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Decorative Stone Supply</h3>
+                            <p class="text-gray-600">Supplying clients with beautiful, naturally coloured stones to build stunning feature walls.</p>
+                        </div>
+                    </div>
+                     <div class="rounded-lg overflow-hidden shadow-lg group">
+                        <img src="./land-clearing.jpeg" alt="Residential Land Clearing" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Residential Land Clearing</h3>
+                            <p class="text-gray-600">Efficient and complete land clearing to prepare plots for new residential housing projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Partners Section -->
+        <section id="partners" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12">Our Trusted Partners</h2>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 md:gap-x-24">
+                    <div class="partner-logo text-center">
+                        <img src="./alteo-logo.jpg" alt="Alteo Limited Logo" class="mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/200x100';">
+                        <p class="mt-2 text-gray-600 font-semibold">Alteo Ltd</p>
+                    </div>
+                    <div class="partner-logo text-center">
+                         <img src="./gamma-logo.jpg" alt="Gamma Materials Ltd Logo" class="mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/200x100';">
+                         <p class="mt-2 text-gray-600 font-semibold">Gamma Materials Ltd</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+                <div class="max-w-4xl mx-auto bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <form action="#">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-sky-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-sky-700 transition">Send Message</button>
+                        </form>
+                        <!-- Contact Info -->
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                            <p class="text-gray-600 mb-4">Based in the East of Mauritius, we're ready to help you get started on your next project. Reach out for a quote or consultation.</p>
+                            <div class="space-y-4">
+                                <a href="tel:+23057722999" class="flex items-center text-gray-800 hover:text-sky-600 transition">
+                                    <i class="fas fa-phone mr-4 text-sky-600 w-5 text-center"></i> +230 5772 2999
+                                </a>
+                                <a href="https://wa.me/23057722999" target="_blank" class="flex items-center text-gray-800 hover:text-sky-600 transition">
+                                    <i class="fab fa-whatsapp mr-4 text-sky-600 w-5 text-center"></i> +230 5772 2999
+                                </a>
+                                <a href="mailto:contact@hiddenrock.mu" class="flex items-center text-gray-800 hover:text-sky-600 transition">
+                                    <i class="fas fa-envelope mr-4 text-sky-600 w-5 text-center"></i> contact@hiddenrock.mu
+                                </a>
+                                <p class="flex items-center">
+                                    <i class="fas fa-map-marker-alt mr-4 text-sky-600 w-5 text-center"></i> Ecroignard, Flacq, Mauritius
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Hidden Rock. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/23057722999" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp" style="margin-top: 15px;"></i>
+    </a>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+
+                // If the href is just '#', scroll to the top of the page.
+                if (targetId === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                     // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    return; // Stop further execution for this link
+                }
+                
+                // Find the target element
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Close mobile menu on link click
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // For other links, scroll to the corresponding section.
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
